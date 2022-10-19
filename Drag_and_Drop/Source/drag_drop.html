@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="drag_drop_css.css">
+	<script src="drag_drop_js.js"></script>
+</head>
+<body>
+	<table>
+        <tr>
+            <td>
+                <p style="display: none;">Score: <text id="score001">0</text></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="box001" ondrop="dropcheck(event)" ondragover="allowDrop(event)">
+                    <img class="icons" src="../img/what.svg" alt="Question" id="place001"/>
+                </div>
+
+                <div class="box01">
+                    <img class="icons" src="../img/plus.svg" alt="Plus"/>
+                </div>
+
+                <div class="box001" ondrop="dropcheck(event)" ondragover="allowDrop(event)" >
+                    <img class="icons" src="../img/what.svg" alt="Question" id="place002"/>
+                </div>
+
+                <div class="box01">
+                    <img class="icons" src="../img/equal.svg" alt="Equal"/>
+                </div>
+                
+                <div class="box001">
+                    <img class="icons" src="../img/what.svg" alt="Question" id="place003"/>
+                </div>
+
+                <div class="box01">
+                    <img class="icons" src="../img/reload.svg" alt="Reload" onclick="reloadpage()" />
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="box002" ondrop="dropcheck(event)" ondragover="allowDrop(event)">
+                    <img class="icons" src="../img/water.svg" ondragstart="drag(event)" draggable="true" id="water" alt="Water" />
+                </div>
+
+                <div class="box002" ondrop="drop(event)">
+                    <img class="icons" src="../img/fire.svg" ondragstart="drag(event)" draggable="true" id="fire" alt="Fire" />
+                </div>
+
+                <div class="box002" ondrop="drop(event)">
+                    <img class="icons" src="../img/wood.svg" ondragstart="drag(event)" draggable="true" id="wood" alt="Wood" />
+                </div>
+
+                <div class="box002" ondrop="drop(event)">
+                    <img class="icons" src="../img/sand.svg" ondragstart="drag(event)" draggable="true" id="sand" alt="Sand" />
+                </div>
+
+                <div class="con1">
+                    <img class="icons" src="../img/steam.svg" id="con1img" alt="Reward" />
+                </div>
+
+                <div class="con2">
+                    <img class="icons" src="../img/coal.svg" id="con2img" alt="Reward" />
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="con3">
+                    <img class="icons" src="../img/steam.svg" id="con1img" alt="Reward" />
+                </div>
+
+                <div class="con4">
+                    <img class="icons" src="../img/coal.svg" id="con2img" alt="Reward" />
+                </div>
+
+                <div class="con5">
+                    <img class="icons" src="../img/glass.svg" id="con3img" alt="Reward" />
+                </div>
+
+                <div class="con6">
+                    <img class="icons" src="../img/mud.svg" id="con4img" alt="Reward" />
+                </div>
+
+                <div class="con7">
+                    <img class="icons" src="../img/glass.svg" id="con3img" alt="Reward" />
+                </div>
+
+                <div class="con8">
+                    <img class="icons" src="../img/mud.svg" id="con4img" alt="Reward" />
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button style="display: none;" onclick="submit001()">Submit</button>
+                <p id="message001"></p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
