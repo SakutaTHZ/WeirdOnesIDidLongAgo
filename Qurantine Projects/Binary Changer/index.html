@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Binary Math </title>
+	<script type="text/javascript" src="indexjs.js"></script>
+	<link rel="stylesheet" type="text/css" href="indexcss.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div id="app">
+		<div id="wrapper">
+			<!-- Make sure data-text equals the text you put inside the tags. -->
+			<h1 class="glitch" data-text="
+			LordBINARY">LordBINARY</h1>
+			<span class="sub">LordBINARY</span>
+		</div>
+	</div>
+	<div id="binarybox" align="center">
+		<br><br>
+		<table>
+			<tr>
+				<td> <input type="text" name="binaryinput" placeholder="Binary" class="textbox" id="binaryinput" onkeypress="javascript:return isNumber(event)"> </td>
+			</tr>
+			<tr>
+				<td> <input type="text" name="numericinput" placeholder="Numeric" class="textbox" id="numericinput" onkeypress="javascript:return isNumber(event)"> </td>
+			</tr>
+			<tr>
+				<td> 
+					<div class="container">
+						<div class="email" onclick="this.classList.add('expand'); checkanswer();">
+							<div class="from">
+								<div class="from-contents">
+									<div class="name" onclick="checkanswer()">Decode</div>
+								</div>
+							</div>
+							<div class="to">
+								<div class="to-contents">
+									<div class="top">
+										<div class="name-large">Decoded Values</div>
+										<div class="x-touch" onclick="document.querySelector('.email').classList.remove('expand');event.stopPropagation();">
+											<div class="x">
+												<div class="line1"></div>
+												<div class="line2"></div>
+											</div>
+										</div>
+									</div>
+									<div class="bottom">
+										<div class="row">
+											<div class="link"><p title="This is Binary Value" class="answers" id="answerbinary">0</p></div>
+										</div>
+										<div class="row">
+											<div class="link"><p title="This is Numeric Value" class="answers" id="answernumeric">0</p></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="calculation-table">
+						<h4 align="center">Binary Calculation</h4>
+						<table class="table-fill">
+							<thead>
+								<tr>
+									<th class="text-left"></th>
+									<th class="text-left">Number</th>
+									<th class="text-left">Answer</th>
+								</tr>
+							</thead>
+							<tbody id="testing" class="table-hover">
+								
+							</tbody>
+						</table>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<br><br>
+	</div>
+	<!-- footer -->
+	<footer class="footer-distributed">
+
+		<div class="footer-left">
+
+			<h3>UNO<span>dev</span></h3>
+
+			<p class="footer-links">
+				<a href="#">Home</a>
+				·
+				<a href="#">Blog</a>
+				·
+				<a href="#">Pricing</a>
+				·
+				<a href="#">About</a>
+				·
+				<a href="#">Faq</a>
+				·
+				<a href="#">Contact</a>
+			</p>
+
+			<p class="footer-company-name">UNOdev © 2020</p>
+
+			<div class="footer-icons">
+
+				<a href="#"><i class="fa fa-facebook"></i></a>
+				<a href="#"><i class="fa fa-twitter"></i></a>
+				<a href="#"><i class="fa fa-linkedin"></i></a>
+				<a href="#"><i class="fa fa-github"></i></a>
+
+			</div>
+
+		</div>
+
+		<div class="footer-right">
+
+			<p>Contact Us</p>
+
+			<form action="#" method="post">
+
+				<input type="text" name="email" placeholder="Email">
+				<textarea name="message" placeholder="Message"></textarea>
+				<button>Send</button>
+
+			</form>
+
+		</div>
+
+	</footer>
+</body>
+</html>

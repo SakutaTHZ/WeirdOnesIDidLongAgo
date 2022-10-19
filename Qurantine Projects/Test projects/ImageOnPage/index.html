@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Upload image on site</title>
+	<script>
+		window.addEventListener('load', function() {
+			document.querySelector('input[type="file"]').addEventListener('change', function() {
+				if (this.files && this.files[0]) {
+          var img = document.querySelector('img');  // $('img')[0]
+          img.src = URL.createObjectURL(this.files[0]); // set src to blob url
+          img.onload = imageIsLoaded;
+      }
+  });
+		});
+
+		function imageIsLoaded() { 
+  			alert(this.src);  // blob url
+  			// update width and height ...
+  		}
+  	</script>
+  	<style type="text/css">
+  		#content: {
+  			top: 50px;
+  			align-items: left;
+  		}
+  		img{
+  			background-color: white;
+  			width: 50%;
+  			max-width: 100%;
+  			max-height: 100%;
+  			display: block;
+  		}
+  		#header{
+  			position: relative;
+  			left: 0;
+  			top: 0;
+  			right: 0;
+  			padding: 30px;
+  			text-align: center;
+  			color: white;
+  			font-size: 30px;
+    		background: linear-gradient(to right, #66ffff -4%, #ffff66 100%);
+  		}
+  	</style>
+  </head>
+  <body>
+  	<div id="header">
+  		Image uploader
+  	</div>
+  	<div id="content" align="center">
+  		<img id="myImg">
+  		<br>
+  		<input type='file' accept="image/*" align="left"/>
+  		<br>
+  	</div>
+  </body>
+  </html>
